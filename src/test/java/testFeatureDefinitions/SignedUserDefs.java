@@ -1,6 +1,7 @@
 package testFeatureDefinitions;
 
 
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -9,36 +10,26 @@ import pages.HomePage;
 import pages.MenuPage;
 import testUtils.TestBase;
 
-public class SignedUserDefs {
+public class SignedUserDefs extends TestBase {
 
     HomePage homePage;
-    MenuPage menuPage;
-    TestBase testBase;
 
-    public SignedUserDefs(TestBase base)
+    public SignedUserDefs()
     {
-        testBase = base;
-        homePage = new HomePage(testBase.driver);
-    }
-
-    @Given("^I Navigated to Papajohns Website$")
-    public void iNavigatedToPapajohnsWebsite() throws Throwable {
-        System.out.println("Navigated to Papajohns Website");
+        homePage = new HomePage(driver);
     }
 
     @When("^I submit Username and Password$")
     public void iSubmitUsernameAndPassword() throws Throwable {
-        menuPage = homePage.login("","");
-
+        homePage.clickHeaderLogIn()
+                .setEmailAddress("qa001@papajohns.com")
+                .setPassword("TestUser!1")
+                .clickLogIn();
     }
 
     @Then("^I should be in Welcome page with User name$")
     public void iShouldBeInWelcomePageWithUserName() throws Throwable {
-        menuPage.verifyWelcomePage();
+
     }
 
-    @And("^I should see carryout or delivery store$")
-    public void iShouldSeeCarryoutOrDeliveryStore() throws Throwable {
-        menuPage.verifyStore();
-    }
 }

@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -23,9 +24,9 @@ public class PageHandler {
             waitForElementToBeVisible(element);
             element.click();
         } catch (ElementNotVisibleException expection) {
-            System.out.println("Unable to Locate the element");
+            Log.info("Unable to Locate the element");
         } catch (Exception ex) {
-            System.out.println("Exception Caught:" + ex.getMessage());
+            Log.info("Exception Caught:" + ex.getMessage());
         }
     }
 
@@ -38,9 +39,9 @@ public class PageHandler {
             element.clear();
             element.sendKeys(textToEnter);
         } catch (ElementNotVisibleException exception) {
-            System.out.println("Unable to Locate the element");
+            Log.info("Unable to Locate the element");
         } catch (Exception ex) {
-            System.out.println("Exception Caught:" + ex.getMessage());
+            Log.info("Exception Caught:" + ex.getMessage());
         }
     }
 
@@ -54,9 +55,9 @@ public class PageHandler {
             }
 
         } catch (ElementNotVisibleException exception) {
-            System.out.println("Unable to Locate the element");
+            Log.info("Unable to Locate the element");
         } catch (Exception ex) {
-            System.out.println("Exception Caught:" + ex.getMessage());
+            Log.info("Exception Caught:" + ex.getMessage());
         }
         return false;
 
@@ -72,5 +73,9 @@ public class PageHandler {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
+
+    public void VerifyText(String txt){
+
     }
 }

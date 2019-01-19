@@ -1,5 +1,6 @@
 package pages;
 
+import modules.Log;
 import modules.PageHandler;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,82 +13,61 @@ import org.openqa.selenium.support.PageFactory;
  */
 public class HomePage extends PageHandler {
 
-    @FindBy(xpath = "//a[@id='accountAccordion']/strong")
-    WebElement signinText;
+    @FindBy(xpath = "//a[contains(text(),'Start Your Order')]")
+    WebElement btnStartYourOrder;
 
-    @FindBy(id = "omnibar-account-sign-in-email")
-    WebElement emailAddressTextField;
+    @FindBy(xpath = "//ul[@class='nav-utility-list']/li[3]/a[1]")
+    WebElement btnHeaderLogIn;
 
-    @FindBy(id = "omnibar-account-sign-in-password")
-    WebElement passwordTextField;
+    @FindBy(id = "header-account-sign-in-email")
+    WebElement txtbxEmailAddress;
 
-    @FindBy(xpath = "//input[@value='Sign In']")
-    WebElement signinSubmitButton;
+    @FindBy(id = "header-account-sign-in-password")
+    WebElement txtbxPassword;
 
-    @FindBy(xpath = "//div[@id='modal-T38']/div/header/a")
-    WebElement promoPopupCloseButton;
+    @FindBy(xpath = "//input[@value='Log In']")
+    WebElement btnLogIn;
 
-    @FindBy(id = "omnibar-recaptcha_error_msg")
-    WebElement errorMsgForInvalidLogin;
+    @FindBy(id = "header-recaptcha_error_msg")
+    WebElement txtErrorMsg;
 
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
-       /* if (!(driver.getTitle().contains("Order for Delivery or Carryout"))) {
+        if (!(driver.getTitle().contains("Order for Delivery or Carryout"))) {
             throw new IllegalStateException("Home page is expected, but not displayed!");
-        }*/
-
-        System.out.println("Navigated to Home Page");
-    }
-
-    public MenuPage login(String emailId, String password) {
-
-      /* // closePromoPopup();
-        if (waitForElementToBeVisible(signinText)) {
-            click(signinText);
-            System.out.println("Clicked on Signin Text");
-            enterText(emailAddressTextField, emailId);
-            System.out.println("Entered "+emailId+" in E-maild field");
-            enterText(passwordTextField, password);
-            System.out.println("Entered "+password+" in Password field");
-            click(signinSubmitButton);
-            System.out.println("Clicked on Submit button");
-            waitFor(5);
-            return new MenuPage(driver);
-        }*/
-        System.out.println("Entered Username and Password");
-        return new MenuPage(driver);
-
-    }
-
-    public void invalidLogin(String emailId, String password) {
-
-        //closePromoPopup();
-       /* if (waitForElementToBeVisible(signinText)) {
-            click(signinText);
-            System.out.println("Clicked on Signin Text");
-            enterText(emailAddressTextField, emailId);
-            System.out.println("Entered "+emailId+" in E-maild field");
-            enterText(passwordTextField, password);
-            System.out.println("Entered "+password+" in Password field");
-            click(signinSubmitButton);
-            System.out.println("Clicked on Submit button");
-            if(errorMsgForInvalidLogin.isDisplayed()){
-                System.out.println("Error Dialog Appeared");
-            }
-
-        }*/
-
-    }
-
-    public void closePromoPopup() {
-        waitForPageToLoad();
-        for (String winHandle : driver.getWindowHandles()) {
-            driver.switchTo().window(winHandle); // switch focus of WebDriver to the next found window handle (that's your newly opened window)
         }
-        click(promoPopupCloseButton);
-        waitFor(3);
-
+        Log.info("Navigated to Home Page");
     }
+
+    public LocationPage clickStartYourOrder() {
+        click(btnStartYourOrder);
+        Log.info("Clicked On Start Your order Button");
+        return new LocationPage(driver);
+    }
+
+    public HomePage clickHeaderLogIn(){
+        click(btnHeaderLogIn);
+        Log.info("Clicked On Login button in Home Page Start ");
+        return this;
+    }
+    public HomePage setEmailAddress(String email){
+        enterText(txtbxEmailAddress,email);
+        Log.info("Entered "+email+" in Email TextField ");
+        return this;
+    }
+    public HomePage setPassword(String password){
+        enterText(txtbxPassword,password);
+        Log.info("Entered "+password+" in password TextField ");
+        return this;
+    }
+    public void clickLogIn(){
+        click(btnLogIn);
+        Log.info("Clicked On Login button");
+    }
+
+
+
+
 }

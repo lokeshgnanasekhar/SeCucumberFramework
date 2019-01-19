@@ -1,0 +1,88 @@
+2019-01-18 23:48:09,731 - modules.Log -INFO - &&&&&&&&&&&&&&&& LOkesh
+2019-01-18 23:48:12,047 - modules.Log -INFO - **********************************************************************************************
+2019-01-18 23:48:12,047 - modules.Log -INFO - -------------------  -------------VERIFY USER ABLE TO SET CARRYOUT STORE-STARTED   -------------------------
+2019-01-18 23:48:12,048 - modules.Log -INFO - **********************************************************************************************
+2019-01-18 23:48:14,151 - modules.Log -INFO - Navigated to Home Page
+2019-01-18 23:48:21,059 - modules.Log -INFO - Navigated to Location Page
+2019-01-18 23:48:45,152 - modules.Log -INFO - **********************************************************************************************
+2019-01-18 23:48:45,153 - modules.Log -INFO - -------------------  VERIFY USER ABLE TO SET CARRYOUT STORE-STARTED   -------------------------
+2019-01-18 23:48:45,154 - modules.Log -INFO - **********************************************************************************************
+2019-01-18 23:50:51,734 - modules.Log -INFO - **********************************************************************************************
+2019-01-18 23:50:51,737 - modules.Log -INFO - -------------------  VERIFY USER ABLE TO SET CARRYOUT STORE-STARTED   -------------------------
+2019-01-18 23:50:51,737 - modules.Log -INFO - **********************************************************************************************
+2019-01-18 23:50:56,464 - modules.Log -ERROR - Launching https://www.papajohns.com
+2019-01-18 23:50:56,490 - modules.Log -INFO - Navigated to Home Page
+2019-01-18 23:51:02,653 - modules.Log -INFO - Navigated to Location Page
+2019-01-18 23:51:24,533 - modules.Log -INFO - ***********************   VERIFY USER ABLE TO SET CARRYOUT STORE- ENDED  ************************
+2019-01-18 23:51:24,653 - modules.Log -WARN - Closed Website
+2019-01-19 00:06:42,045 - modules.Log -INFO - **********************************************************************************************
+2019-01-19 00:06:42,049 - modules.Log -INFO - -------------------  VERIFY USER ABLE TO SET CARRYOUT STORE-STARTED   -------------------------
+2019-01-19 00:06:42,049 - modules.Log -INFO - **********************************************************************************************
+2019-01-19 00:06:46,320 - modules.Log -ERROR - Launching https://www.papajohns.com
+2019-01-19 00:06:46,361 - modules.Log -INFO - Navigated to Home Page
+2019-01-19 00:06:48,285 - modules.Log -INFO - Clicked On Start Your order Button
+2019-01-19 00:06:48,438 - modules.Log -INFO - Navigated to Location Page
+2019-01-19 00:06:48,589 - modules.Log -INFO - Selected  Delivery type as Carryout
+2019-01-19 00:06:48,797 - modules.Log -INFO - Entered Carryout Zipcode as -- 40220
+2019-01-19 00:06:49,086 - modules.Log -INFO - Clicked on submit
+2019-01-19 00:06:50,182 - modules.Log -INFO - Click on View more stores link
+2019-01-19 00:06:50,486 - modules.Log -INFO - Expanded Carryout store
+2019-01-19 00:06:56,874 - modules.Log -INFO - Expanded Carryout store
+2019-01-19 00:06:56,876 - modules.Log -INFO - ***********************   VERIFY USER ABLE TO SET CARRYOUT STORE- ENDED  ************************
+2019-01-19 00:06:57,005 - modules.Log -WARN - Closed Website
+2019-01-19 00:31:38,529 - modules.Log -INFO - **********************************************************************************************
+2019-01-19 00:31:38,535 - modules.Log -INFO - -------------------  VERIFY USER ABLE TO LOGIN INTO THE WEBSITE WITH CORRECT CREDENTIALS-STARTED   -------------------------
+2019-01-19 00:31:38,536 - modules.Log -INFO - **********************************************************************************************
+2019-01-19 00:31:46,139 - modules.Log -INFO - Launching https://www.papajohns.com
+2019-01-19 00:31:46,167 - modules.Log -INFO - Navigated to Home Page
+2019-01-19 00:31:46,308 - modules.Log -INFO - Clicked On Login button in Home Page Start 
+2019-01-19 00:31:46,821 - modules.Log -INFO - Entered qa001@papajohns.com in Email TextField 
+2019-01-19 00:31:46,995 - modules.Log -INFO - Entered TestUser!1 in password TextField 
+2019-01-19 00:31:47,129 - modules.Log -INFO - Clicked On Login button
+2019-01-19 00:31:47,130 - modules.Log -INFO - ***********************   VERIFY USER ABLE TO LOGIN INTO THE WEBSITE WITH CORRECT CREDENTIALS- ENDED  ************************
+2019-01-19 00:31:47,298 - modules.Log -INFO - Closed Website
+2019-01-19 00:33:16,440 - modules.Log -INFO - **********************************************************************************************
+2019-01-19 00:33:16,446 - modules.Log -INFO - -------------------  VERIFY USER ABLE TO LOGIN INTO THE WEBSITE WITH CORRECT CREDENTIALS-STARTED   -------------------------
+2019-01-19 00:33:16,446 - modules.Log -INFO - **********************************************************************************************
+2019-01-19 00:33:25,575 - modules.Log -INFO - Launching https://www.papajohns.com
+2019-01-19 00:33:25,609 - modules.Log -INFO - Navigated to Home Page
+2019-01-19 00:33:25,773 - modules.Log -INFO - Clicked On Login button in Home Page Start 
+2019-01-19 00:33:26,076 - modules.Log -INFO - Entered qa001@papajohns.com in Email TextField 
+2019-01-19 00:33:26,282 - modules.Log -INFO - Entered TestUser!1 in password TextField 
+2019-01-19 00:33:26,509 - modules.Log -INFO - Clicked On Login button
+2019-01-19 00:33:26,509 - modules.Log -INFO - ***********************   VERIFY USER ABLE TO LOGIN INTO THE WEBSITE WITH CORRECT CREDENTIALS- ENDED  ************************
+2019-01-19 00:33:26,674 - modules.Log -INFO - Closed Website
+2019-01-19 00:34:03,976 - modules.Log -INFO - **********************************************************************************************
+2019-01-19 00:34:03,983 - modules.Log -INFO - -------------------  VERIFY USER ABLE TO LOGIN INTO THE WEBSITE WITH CORRECT CREDENTIALS-STARTED   -------------------------
+2019-01-19 00:34:03,984 - modules.Log -INFO - **********************************************************************************************
+2019-01-19 00:34:09,648 - modules.Log -INFO - Launching https://www.papajohns.com
+2019-01-19 00:34:09,677 - modules.Log -INFO - Navigated to Home Page
+2019-01-19 00:34:14,888 - modules.Log -INFO - Clicked On Login button in Home Page Start 
+2019-01-19 00:34:15,146 - modules.Log -INFO - Entered qa001@papajohns.com in Email TextField 
+2019-01-19 00:34:15,317 - modules.Log -INFO - Entered TestUser!1 in password TextField 
+2019-01-19 00:34:20,484 - modules.Log -INFO - Clicked On Login button
+2019-01-19 00:34:20,484 - modules.Log -INFO - ***********************   VERIFY USER ABLE TO LOGIN INTO THE WEBSITE WITH CORRECT CREDENTIALS- ENDED  ************************
+2019-01-19 00:34:20,605 - modules.Log -INFO - Closed Website
+2019-01-19 00:36:35,256 - modules.Log -INFO - **********************************************************************************************
+2019-01-19 00:36:35,261 - modules.Log -INFO - -------------------  VERIFY USER ABLE TO SET CARRYOUT STORE-STARTED   -------------------------
+2019-01-19 00:36:35,261 - modules.Log -INFO - **********************************************************************************************
+2019-01-19 00:36:40,883 - modules.Log -INFO - Launching https://www.papajohns.com
+2019-01-19 00:36:41,053 - modules.Log -INFO - Navigated to Home Page
+2019-01-19 00:36:45,434 - modules.Log -INFO - Clicked On Start Your order Button
+2019-01-19 00:36:45,441 - modules.Log -INFO - Navigated to Location Page
+2019-01-19 00:36:45,552 - modules.Log -INFO - Selected  Delivery type as Carryout
+2019-01-19 00:36:45,729 - modules.Log -INFO - Entered Carryout Zipcode as -- 40220
+2019-01-19 00:36:45,891 - modules.Log -INFO - Clicked on submit
+2019-01-19 00:36:45,892 - modules.Log -INFO - ***********************   VERIFY USER ABLE TO SET CARRYOUT STORE- ENDED  ************************
+2019-01-19 00:36:46,071 - modules.Log -INFO - Closed Website
+2019-01-19 00:36:47,302 - modules.Log -INFO - **********************************************************************************************
+2019-01-19 00:36:47,302 - modules.Log -INFO - -------------------  VERIFY USER ABLE TO LOGIN INTO THE WEBSITE WITH CORRECT CREDENTIALS-STARTED   -------------------------
+2019-01-19 00:36:47,303 - modules.Log -INFO - **********************************************************************************************
+2019-01-19 00:36:54,613 - modules.Log -INFO - Launching https://www.papajohns.com
+2019-01-19 00:36:54,624 - modules.Log -INFO - Navigated to Home Page
+2019-01-19 00:36:59,837 - modules.Log -INFO - Clicked On Login button in Home Page Start 
+2019-01-19 00:37:00,112 - modules.Log -INFO - Entered qa001@papajohns.com in Email TextField 
+2019-01-19 00:37:00,279 - modules.Log -INFO - Entered TestUser!1 in password TextField 
+2019-01-19 00:37:05,429 - modules.Log -INFO - Clicked On Login button
+2019-01-19 00:37:05,430 - modules.Log -INFO - ***********************   VERIFY USER ABLE TO LOGIN INTO THE WEBSITE WITH CORRECT CREDENTIALS- ENDED  ************************
+2019-01-19 00:37:05,543 - modules.Log -INFO - Closed Website

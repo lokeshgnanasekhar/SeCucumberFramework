@@ -32,9 +32,9 @@ public class MenuPage extends PageHandler {
     public void editLocation(){
         System.out.println("Wait for 2 secs");
         waitFor(2);
-        System.out.println("Waiting for Location selection block");
+        System.out.println("Waiting for LocationPage selection block");
         waitForElementToBeVisible(locationSelectionBlock);
-        System.out.println("Clicked on Location selection block");
+        System.out.println("Clicked on LocationPage selection block");
         click(locationSelectionBlock);
         System.out.println("Clicked on Start over link");
         click(startOverLink);

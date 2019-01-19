@@ -1,25 +1,29 @@
 package testFeatureDefinitions;
 
+import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
+import modules.Log;
 import testUtils.TestBase;
 
 public class BaseDefs extends TestBase {
 
     @Before
-    public void setUp(){
+    public void setUp(Scenario scenario){
         createDriver();
-        launchWebsite();
+        launchWebsite(scenario.getName());
     }
 
-    public void launchWebsite(){
+    public void launchWebsite(String scenarioName){
+        Log.startTestCase(scenarioName);
         driver.get(projectConfigReader.getURL());
-        System.out.println("Launching " + projectConfigReader.getURL());
+        Log.info("Launching " + projectConfigReader.getURL());
     }
 
     @After
-    public void tearDown() {
+    public void tearDown(Scenario scenario) {
+        Log.endTestCase(scenario.getName());
         closeDriver();
-        System.out.println("Closed Website");
+        Log.info("Closed Website");
     }
 }
