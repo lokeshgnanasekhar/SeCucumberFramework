@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions (
-        features = "src/test/java/testFeatures/" ,
+        features = "src/test/resources/features/" ,
         glue = "testFeatureDefinitions/",
         plugin = { "html:reports/test-reports/cucumber-html-reports", "json:reports/test-reports/cucumber-html-reports/cucumber.json"}
 )

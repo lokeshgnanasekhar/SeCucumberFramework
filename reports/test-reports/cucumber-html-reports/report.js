@@ -1,4 +1,4 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/java/testFeatures/CarryoutStore.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/features/CarryoutStore.feature");
 formatter.feature({
   "name": "As a PJI  User i want to set a Carryout store using different Options",
   "description": "",
@@ -45,7 +45,7 @@ formatter.result({
 formatter.after({
   "status": "passed"
 });
-formatter.uri("src/test/java/testFeatures/SignedUser.feature");
+formatter.uri("src/test/resources/features/SignedUser.feature");
 formatter.feature({
   "name": "As a PJI Signed User i want to verify different options available on successful login",
   "description": "",
@@ -82,7 +82,7 @@ formatter.match({
   "location": "SignedUserDefs.iShouldBeSeeAnErrorMessage()"
 });
 formatter.result({
-  "error_message": "org.junit.ComparisonFailure: expected:\u003c[Re-enter your password and verify that you are human.]\u003e but was:\u003c[]\u003e\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat testFeatureDefinitions.SignedUserDefs.iShouldBeSeeAnErrorMessage(SignedUserDefs.java:34)\n\tat ✽.I should be see an Error message(src/test/java/testFeatures/SignedUser.feature:6)\n",
+  "error_message": "org.junit.ComparisonFailure: expected:\u003c[Re-enter your password and verify that you are human.]\u003e but was:\u003c[]\u003e\n\tat org.junit.Assert.assertEquals(Assert.java:115)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat testFeatureDefinitions.SignedUserDefs.iShouldBeSeeAnErrorMessage(SignedUserDefs.java:34)\n\tat ✽.I should be see an Error message(src/test/resources/features/SignedUser.feature:6)\n",
   "status": "failed"
 });
 formatter.embedding("image/png", "embedded0.png");
