@@ -67,7 +67,9 @@ public class HomePage extends PageHandler {
         Log.info("Clicked On Login button");
     }
 
-
+    public String getErrorText(){
+        return getInnerText(txtErrorMsg);
+    }
 
 
 }

@@ -75,7 +75,26 @@ public class PageHandler {
         }
     }
 
-    public void VerifyText(String txt){
-
+    public String getText(WebElement element){
+        try {
+            waitForElementToBeVisible(element);
+            return element.getText().toString();
+        } catch (ElementNotVisibleException expection) {
+            Log.info("Unable to Locate the element");
+        } catch (Exception ex) {
+            Log.info("Exception Caught:" + ex.getMessage());
+        }
+        return null;
+    }
+    public String getInnerText(WebElement element){
+        try {
+            waitForElementToBeVisible(element);
+            return element.getAttribute("innerHTML").toString();
+        } catch (ElementNotVisibleException expection) {
+            Log.info("Unable to Locate the element");
+        } catch (Exception ex) {
+            Log.info("Exception Caught:" + ex.getMessage());
+        }
+        return null;
     }
 }
