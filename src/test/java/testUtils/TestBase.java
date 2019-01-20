@@ -1,5 +1,6 @@
 package testUtils;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import modules.Log;
 import modules.ProjectConfigReader;
 import org.openqa.selenium.WebDriver;
@@ -26,19 +27,19 @@ public class TestBase {
         switch (browserName) {
             case "chrome":
 
-                System.setProperty("webdriver.chrome.driver", "./src/test/java/testresources/chromedriver");
+                WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver();
                 break;
 
             case "firefox":
 
-                System.setProperty("webdriver.gecko.driver", "./src/test/java/testresources/geckodriver.exe");
+                WebDriverManager.firefoxdriver().setup();
                 driver = new FirefoxDriver();
                 break;
 
             case "ie":
 
-                System.setProperty("webdriver.ie.driver", "./src/test/java/testresources/IEDriverServer.exe");
+                WebDriverManager.chromedriver().setup();
                 driver = new InternetExplorerDriver();
                 break;
 
@@ -55,7 +56,7 @@ public class TestBase {
     public void  initialize(){
 
         projectConfigReader = new ProjectConfigReader();
-        Logger logger = Logger.getLogger(projectConfigReader.getURL());
+       // Logger logger = Logger.getLogger(projectConfigReader.getURL());
 
     }
 
