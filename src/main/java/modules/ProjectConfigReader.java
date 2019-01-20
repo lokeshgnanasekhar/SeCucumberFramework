@@ -15,7 +15,7 @@ public class ProjectConfigReader {
         properties = new Properties();
         try {
             ClassLoader classLoader = getClass().getClassLoader();
-            File file = new File(classLoader.getResource("ProjectConfig.properties").getFile());
+            File file = new File("./ProjectConfig.properties");
             input = new FileInputStream(file);
             properties.load(input);
         } catch (FileNotFoundException e) {

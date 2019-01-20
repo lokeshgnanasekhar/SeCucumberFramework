@@ -1,4 +1,4 @@
-package testFeatureDefinitions;
+package stepdefs;
 
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
@@ -6,9 +6,9 @@ import cucumber.api.java.Before;
 import modules.Log;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import testUtils.TestBase;
+import utils.TestBase;
 
-public class BaseDefs extends TestBase {
+public class Hooks extends TestBase {
 
     @Before
     public void setUp(Scenario scenario){

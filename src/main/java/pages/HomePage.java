@@ -68,6 +68,7 @@ public class HomePage extends PageHandler {
     }
 
     public String getErrorText(){
+        waitFor(1);
         return getInnerText(txtErrorMsg);
     }
 

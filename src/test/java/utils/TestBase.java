@@ -1,13 +1,11 @@
-package testUtils;
+package utils;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import modules.Log;
 import modules.ProjectConfigReader;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
@@ -56,7 +54,7 @@ public class TestBase {
     public void  initialize(){
 
         projectConfigReader = new ProjectConfigReader();
-       // Logger logger = Logger.getLogger(projectConfigReader.getURL());
+        Logger logger = Logger.getLogger(projectConfigReader.getURL());
 
     }
 

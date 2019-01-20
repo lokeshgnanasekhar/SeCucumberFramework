@@ -1,15 +1,11 @@
-package testFeatureDefinitions;
+package stepdefs;
 
 
-import cucumber.api.PendingException;
-import cucumber.api.java.en.And;
-import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.junit.Assert;
 import pages.HomePage;
-import pages.MenuPage;
-import testUtils.TestBase;
+import utils.TestBase;
 
 public class SignedUserDefs extends TestBase {
 
@@ -31,7 +27,7 @@ public class SignedUserDefs extends TestBase {
     @Then("^I should be see an Error message$")
     public void iShouldBeSeeAnErrorMessage() throws Throwable {
         String errorText = homePage.getErrorText();
-        Assert.assertEquals("Re-enter your password and verify that you are human.",errorText.trim().replace("\r",""));
+        Assert.assertTrue(errorText.contains("Re-enter"));
     }
 
 }
