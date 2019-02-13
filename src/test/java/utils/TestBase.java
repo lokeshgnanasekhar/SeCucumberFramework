@@ -6,7 +6,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
@@ -21,12 +25,26 @@ public class TestBase {
         initialize();
 
         String browserName = projectConfigReader.getBrowserName();
+        String executionMode = projectConfigReader.getExeMode();
 
         switch (browserName) {
             case "chrome":
+                if(executionMode.equals("local")) {
+                    WebDriverManager.chromedriver().setup();
+                    driver = new ChromeDriver();
+                }
+                else{
 
-                WebDriverManager.chromedriver().setup();
-                driver = new ChromeDriver();
+                    DesiredCapabilities caps = DesiredCapabilities.chrome();
+                    caps.setCapability("platform", "Windows 10");
+                    caps.setCapability("version", "latest");
+                    try {
+                        driver = new RemoteWebDriver(new URL(projectConfigReader.getSauceURL()), caps);
+                    } catch (MalformedURLException e) {
+                        e.printStackTrace();
+                    }
+
+                }
                 break;
 
             case "firefox":

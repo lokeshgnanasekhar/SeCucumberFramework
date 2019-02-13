@@ -4,12 +4,14 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.When;
 import pages.HomePage;
 import pages.LocationPage;
+import pages.MenuPage;
 import utils.TestBase;
 
 public class CarryoutStoreDefs extends TestBase {
 
     HomePage homePage;
     LocationPage locationPage;
+    MenuPage menuPage;
 
     public CarryoutStoreDefs()
     {

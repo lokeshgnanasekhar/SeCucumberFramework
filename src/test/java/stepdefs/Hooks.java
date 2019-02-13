@@ -28,6 +28,8 @@ public class Hooks extends TestBase {
         if(scenario.isFailed()){
             Log.info("Scenario Failed");
             scenario.embed(((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES),"image/png");
+
+
         }
         closeDriver();
         Log.info("Closed Website");

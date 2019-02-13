@@ -1,6 +1,7 @@
 package stepdefs;
 
 
+import cucumber.api.PendingException;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.junit.Assert;
@@ -28,6 +29,14 @@ public class SignedUserDefs extends TestBase {
     public void iShouldBeSeeAnErrorMessage() throws Throwable {
         String errorText = homePage.getErrorText();
         Assert.assertTrue(errorText.contains("Re-enter"));
+
     }
+
+    @Then("^I should be not see an Error message$")
+    public void iShouldBeNotSeeAnErrorMessage() throws Throwable {
+        String errorText = homePage.getErrorText();
+        Assert.assertTrue(errorText.contains("Reenter"));
+    }
+
 
 }

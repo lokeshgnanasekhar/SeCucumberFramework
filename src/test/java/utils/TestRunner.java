@@ -9,8 +9,8 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features/" ,
         glue = "stepdefs/",
         plugin = { "html:reports/testrunner-reports/cucumber-html-reports", "json:reports/testrunner-reports/cucumber-html-reports/cucumber.json"}
-)*/
+)
 
 
 public class TestRunner {
-}
+}*/

@@ -14,7 +14,7 @@ public class ProjectConfigReader {
     public ProjectConfigReader(){
         properties = new Properties();
         try {
-            ClassLoader classLoader = getClass().getClassLoader();
+
             File file = new File("./ProjectConfig.properties");
             input = new FileInputStream(file);
             properties.load(input);
@@ -32,6 +32,14 @@ public class ProjectConfigReader {
 
     public String getURL(){
         return properties.getProperty("APP_URL");
+    }
+
+    public String getExeMode(){
+        return properties.getProperty("EXE_MODE");
+    }
+
+    public String getSauceURL(){
+        return properties.getProperty("SAUCEURL");
     }
 
 
